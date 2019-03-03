@@ -48,10 +48,12 @@ char * LongestSubStringOfTwoChars(const char * str)
 		}
 	}
 	char * resStr = (char*)malloc((maxSubStrLength) * sizeof(char));
-
-	strncpy(resStr, maxSubStr, maxSubStrLength);
-	*(resStr + maxSubStrLength - 1) = '\0';
-
+	if (resStr)
+	{
+		strncpy(resStr, maxSubStr, maxSubStrLength);
+		*(resStr + maxSubStrLength - 1) = '\0';
+	}
+	
 	return resStr;
 }
 
