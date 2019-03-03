@@ -65,8 +65,8 @@ namespace JobInterviewTests
 
 		TEST_METHOD(TwoSameAlfaCharactersHandling)
 		{
-			const char * sourceString = "aa";
-			const char * expectedString = "aa";
+			const char * sourceString = "AA";
+			const char * expectedString = "AA";
 			char * actualString = LongestSubStringOfTwoChars(sourceString);
 			Assert::AreEqual(expectedString, actualString);
 			free(actualString);
@@ -135,5 +135,6 @@ namespace JobInterviewTests
 			free(actualString);
 		}
 
+		//TODO: Add fuzzing test
 	};
 }
