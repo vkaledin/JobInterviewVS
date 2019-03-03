@@ -1,0 +1,1 @@
+char * LongestSubStringOfTwoChars(const char * str);
