@@ -66,6 +66,22 @@ namespace JobInterviewTests
 			Assert::AreEqual(expectedString, actualString);
 		}
 
+		TEST_METHOD(OneCharacterChangeHandle)
+		{
+			const char * sourceString = "aaaabbbb";
+			const char * expectedString = "aaaabbbb";
+			char * actualString = LongestSubStringOfTwoChars(sourceString);
+			Assert::AreEqual(expectedString, actualString);
+		}
+
+		TEST_METHOD(TwoCharacterChangesHandle)
+		{
+			const char * sourceString = "aaaabbbbaaa";
+			const char * expectedString = "aaaabbbbaaa";
+			char * actualString = LongestSubStringOfTwoChars(sourceString);
+			Assert::AreEqual(expectedString, actualString);
+		}
+
 		TEST_METHOD(ReultSubStringBeginsNotFromStringStart)
 		{
 			const char * sourceString = "abbcc";
@@ -74,10 +90,18 @@ namespace JobInterviewTests
 			Assert::AreEqual(expectedString, actualString);
 		}
 
-		TEST_METHOD(IsResultStringEqualToExpectedOne)
+		TEST_METHOD(IsResultStringEqualToExpectedOne_1)
 		{
 			const char * sourceString = "abaabbcaabbccddccaaa";
 			const char * expectedString = "abaabb";
+			char * actualString = LongestSubStringOfTwoChars(sourceString);
+			Assert::AreEqual(expectedString, actualString);
+		}
+
+		TEST_METHOD(IsResultStringEqualToExpectedOne_2)
+		{
+			const char * sourceString = "aabbaaaabbaabcaaaccccaaabbbbbdddddaaaadddaaabbbc";
+			const char * expectedString = "dddddaaaadddaaa";
 			char * actualString = LongestSubStringOfTwoChars(sourceString);
 			Assert::AreEqual(expectedString, actualString);
 		}
